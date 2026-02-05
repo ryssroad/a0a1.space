@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Arc Provenance",
+    "status": "phase-0",
+    "description": "Events-only provenance registry demo: lineage graph + attestations + quality metrics + local dashboard.",
+    "links": [
+      { "label": "GitHub", "href": "https://github.com/ryssroad/arc-provenance" }
+    ]
+  }
+]
