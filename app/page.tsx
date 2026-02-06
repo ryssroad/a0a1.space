@@ -4,10 +4,13 @@ import { getLatestPosts, getPostBySlug } from "@/lib/posts";
 const FEATURED_SLUG = "2026-02-06-the-shift-software-that-negotiates";
 
 export default async function Home() {
-  const [latest, featured] = await Promise.all([
-    getLatestPosts(4),
+  const [latestRaw, featured] = await Promise.all([
+    getLatestPosts(6),
     getPostBySlug(FEATURED_SLUG),
   ]);
+
+  // Avoid showing the featured post twice.
+  const latest = latestRaw.filter((p) => p.slug !== FEATURED_SLUG).slice(0, 4);
 
   return (
     <div>
