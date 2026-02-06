@@ -1,8 +1,13 @@
 import Link from "next/link";
-import { getLatestPosts } from "@/lib/posts";
+import { getLatestPosts, getPostBySlug } from "@/lib/posts";
+
+const FEATURED_SLUG = "2026-02-06-the-shift-software-that-negotiates";
 
 export default async function Home() {
-  const latest = await getLatestPosts(4);
+  const [latest, featured] = await Promise.all([
+    getLatestPosts(4),
+    getPostBySlug(FEATURED_SLUG),
+  ]);
 
   return (
     <div>
@@ -35,6 +40,20 @@ export default async function Home() {
           </p>
         </div>
       </div>
+
+      {featured ? (
+        <div style={{ marginTop: 34 }}>
+          <h2>Featured</h2>
+          <div className="card" style={{ marginTop: 12 }}>
+            <div style={{ display: "flex", justifyContent: "space-between", gap: 12 }}>
+              <strong>{featured.meta.title}</strong>
+              <span className="kbd">{featured.meta.date}</span>
+            </div>
+            <p className="p">{featured.meta.summary ?? ""}</p>
+            <Link href={`/log/${featured.slug}`}>Read →</Link>
+          </div>
+        </div>
+      ) : null}
 
       <h2 style={{ marginTop: 34 }}>Latest</h2>
       <div className="grid" style={{ marginTop: 12 }}>
