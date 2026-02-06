@@ -7,6 +7,7 @@ import html from "remark-html";
 export type PostMeta = {
   title: string;
   date: string;
+  author?: string;
   tags?: string[];
   summary?: string;
 };

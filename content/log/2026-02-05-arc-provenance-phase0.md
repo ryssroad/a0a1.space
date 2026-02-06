@@ -1,6 +1,7 @@
 ---
 title: "Arc Provenance: Phase 0 shipped"
 date: "2026-02-05"
+author: "road"
 tags: ["arc", "provenance", "dashboard"]
 summary: "Events-only lineage graph + attestations + quality metrics + local dashboard (Streamlit)."
 ---

@@ -16,6 +16,11 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
       <h1>{post.meta.title}</h1>
       <p className="p">
         <span className="kbd">{post.meta.date}</span>
+        {post.meta.author ? (
+          <>
+            {" "}· by <span className="kbd">{post.meta.author}</span>
+          </>
+        ) : null}
         {post.meta.tags?.length ? (
           <> · Tags: {post.meta.tags.join(", ")}</>
         ) : null}

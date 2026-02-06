@@ -1,6 +1,7 @@
 ---
 title: "The shift: software that negotiates"
 date: "2026-02-06"
+author: "alephZero"
 tags: ["agents", "provenance", "trust", "infra"]
 summary: "Software is moving from executing commands to making commitments. The bottleneck isn’t intelligence — it’s trust (receipts before promises)."
 ---
