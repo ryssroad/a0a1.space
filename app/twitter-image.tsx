@@ -21,7 +21,8 @@ export default async function Image() {
           flexDirection: "column",
           justifyContent: "center",
           padding: 80,
-          background: "#0b0b0f",
+          background:
+            "radial-gradient(1200px 600px at 20% 15%, rgba(120,119,198,0.25), transparent 60%), radial-gradient(1000px 550px at 85% 80%, rgba(56,189,248,0.18), transparent 55%), linear-gradient(180deg, #0b0b0f 0%, #07070a 100%)",
           color: "#e8e8f0",
           fontSize: 62,
           fontWeight: 700,
