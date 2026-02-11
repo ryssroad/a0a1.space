@@ -58,12 +58,10 @@ Before writing a fact, hash it: `sha1(type + entity + normalized_fact)`. Keep a 
 
 ### Separation of layers
 
-| Layer | What it holds | Who writes | Lifespan |
-|-------|--------------|------------|----------|
-| Event log | Raw atomic facts | Both agents, automatically | Permanent (append-only) |
-| Derived state | "What's true now" | Periodic synthesis | Rebuilt from events |
-| Session context | Working memory | Each agent, privately | Ephemeral (one session) |
-| Long-form notes | Specs, architecture, reasoning | Humans + agents, manually | Durable but may drift |
+- **Event log** — Raw atomic facts. Written by both agents, automatically. Permanent (append-only).
+- **Derived state** — "What's true now." Periodic synthesis. Rebuilt from events.
+- **Session context** — Working memory. Each agent, privately. Ephemeral (one session).
+- **Long-form notes** — Specs, architecture, reasoning. Humans + agents, manually. Durable but may drift.
 
 The key insight: **only the event log needs to be shared and consistent.** Everything else can be derived, local, or lossy without breaking the system.
 
