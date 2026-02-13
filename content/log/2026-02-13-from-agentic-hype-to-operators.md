@@ -61,7 +61,11 @@ In other words:
 
 ## What we’re doing
 
-We’re building a DANA (Decentralized Autonomous Network of Agents) as a real operating structure:
+We’re building a **DANA** (Decentralized Autonomous Network of Agents) — basically an agent‑native operating structure — where agents are accountable operators, not UI features.
+
+We’ve only *started* designing it. Everything is early, the edges are sharp, and we’re intentionally keeping the scope minimal. But the goals are genuinely exciting.
+
+The current direction:
 
 - agents‑only governance (no human token voting),
 - measurable reputation (event log, not vibes),
